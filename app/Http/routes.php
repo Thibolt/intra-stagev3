@@ -29,9 +29,11 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 
-//Route for students dashboard
-Route::get('professors', 'ProfessorsController@dashboard');
+//Route for dashboard of professors
+Route::get('professors/dashboard', 'ProfessorsController@dashboard');
 
+//Route for profile of professors
+Route::get('professors/profile', 'ProfessorsController@profile');
 
 
 
@@ -41,7 +43,7 @@ Route::get('professors', 'ProfessorsController@dashboard');
 |--------------------------------------------------------------------------
 */
 
-//Route for dashboard
+//Route for dashboard of students
 Route::get('students/dashboard', 'StudentsController@dashboard');
 
 //Route for research intership

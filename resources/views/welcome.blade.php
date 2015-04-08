@@ -1,48 +1,62 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./images/favicon.png">
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+    <title>Intra-Stage</title>
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css" id="holderjs-style"></style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" href="http://intra-stage.lan/">Intra-Stage</a>
+    </nav>
+    <form class="form-signin" method="POST" action="./processing/professors-connection-process.php">
+        <h2 class="form-signin-heading"><span class="glyphicon glyphicon-user"></span> Authentification Professeur</h2>
+        <input class="form-control" name="professors_login" placeholder="Identifiant" required="" autofocus="" type="text">
+        <input class="form-control" name="professors_password" placeholder="Mot de passe" required="" type="password">
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-in"></span> Connexion</button>
+        <br />
+        <br />
+        <br />
+        <br />
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
-		</div>
-	</body>
+        <p>
+            <a class="btn btn-lg btn-primary btn-block" href="{{ url('professors/dashboard') }}" role="button">Accès TMP Professeurs</a>
+        </p>
+        <p>
+            <a class="btn btn-lg btn-primary btn-block" href="{{ url('students/dashboard') }}" role="button">Accès Élèves</a>
+        </p>
+    </form>
+</div> <!-- /container -->
+<hr />
+<footer>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+    </a>
+    <br />
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Intra-Stage de </span>
+    <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Thibault Carcaillon</span> est mis à disposition selon les termes de la
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.
+</footer>
+</body>
 </html>

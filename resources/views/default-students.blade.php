@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="../css/dashborad-students.css" rel="stylesheet">
+    <link href="../css/dashboard-students.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
