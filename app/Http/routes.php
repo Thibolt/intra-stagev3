@@ -83,6 +83,9 @@ Route::get('professors/edit-template-convenant', 'AdministrationController@editT
 */
 
 //Route for dashboard of students
+Route::get('students', 'StudentsController@dashboard');
+
+//Route for dashboard of students
 Route::get('students/dashboard', 'StudentsController@dashboard');
 
 //Route for research intership
