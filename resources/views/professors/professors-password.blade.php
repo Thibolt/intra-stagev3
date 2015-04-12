@@ -30,45 +30,43 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="{{ url('professors/profile') }}"><span class="glyphicon glyphicon-user"></span> Mon Profil</a></li>
-                    <li><a href="{{ url('professors/password') }}"><span class="glyphicon glyphicon-lock"></span> Mot de passe</a></li>
+                    <li ><a href="{{ url('professors/profile') }}"><span class="glyphicon glyphicon-user"></span> Mon Profil</a></li>
+                    <li class="active"><a href="{{ url('professors/password') }}"><span class="glyphicon glyphicon-lock"></span> Mot de passe</a></li>
                 </ul>
             </div>
 @endsection
 
 @section('content')
                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                    <h1 class="page-header"><span class="glyphicon glyphicon-edit"></span> Modifier mon compte</h1>
-                    <form class="form-horizontal" method="POST" action="{{url('#')}}">
-                        <label for="professors_name">Nom :</label>
-                        <div class="input-group ">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                            <input type="text" class="form-control" name="name" id="professors_name" value="">
-                        </div>
-                        <br/>
-
-                        <label for="professors_first_name">Prénom :</label>
-                        <div class="input-group ">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                            <input type="text" class="form-control" name="firstName" id="professors_first_name" value="">
-                        </div>
-                        <br/>
-
-                        <label for="professors_email">Email :</label>
+                    <h1 class="page-header"><span class="glyphicon glyphicon-lock"></span> Modifier mon mot de passe</h1>
+                    <div class="alert alert-info">
+                        <p><span class="glyphicon glyphicon-info-sign"></span> Votre mot de passe doit comporter au minimum quatre caractères !</p>
+                    </div>
+                    <form class="form-horizontal" name="New-Password" method="post" action="../processing/professors-modify-password-process.php">
+                        <label for="old-password">Ancien mot de passe :</label>
                         <div class="input-group">
-                            <span class="input-group-addon">@</span>
-                            <input type="text" class="form-control" name="email" id="professors_email" value="">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input class="form-control" type="password" id="old-password" name="old_password" placeholder="" required="">
                         </div>
+
                         <br/>
 
-                        <label for="professors_login">Login :</label>
+                        <label for="new-password">Nouveau mot de passe :</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                            <input type="text" class="form-control" name="login" id="professors_login" value="">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input class="form-control" type="password" id="new-password" name="new_password" placeholder="" required="">
                         </div>
-                        <input type="hidden" class="form-control" name="sessionName" id="professors_session" value="">
-                        <input type="hidden" class="form-control" name="professorsId" id="professors_id" value="">
+
                         <br/>
+
+                        <label for="confirm-newPassword">Confirmer le nouveau mot de passe :</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input class="form-control" type="password" id="confirm-newPassword" name="confirm_newPassword" placeholder="" required="">
+                        </div>
+
+                        <br/>
+
                         <p class="center"><button class="btn btn-lg btn-primary btn-center" type="submit"><span class="glyphicon glyphicon-floppy-save"></span> Enregistrer</button></p>
                     </form>
                 </div>
