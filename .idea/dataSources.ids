@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - intra-stage@localhost" uuid="78a7a083-b827-4248-aa85-4db48fd618ec">
+    <database-info product="MySQL" version="5.5.41-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="intra-stage"/>
+    <table name="professors" schema="" catalog="intra-stage" type="TABLE">
+      <column name="professors_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="professors_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="professors_first_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="professors_email" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="professors_login" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="professors_password" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="professors_id"/>
+    </table>
+    <table name="students" schema="" catalog="intra-stage" type="TABLE">
+      <column name="students_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="students_name" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_firstname" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_section" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_option" sqlType="VARCHAR" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_birthday" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_address" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_postalCode" sqlType="VARCHAR" precision="5" scale="0" nullable="true" jdbcType="12"/>
+      <column name="students_city" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="students_id"/>
+    </table>
+  </data-source>
+</component>
