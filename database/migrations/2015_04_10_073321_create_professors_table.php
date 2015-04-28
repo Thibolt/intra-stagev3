@@ -15,8 +15,8 @@ class CreateProfessorsTable extends Migration {
 		Schema::create('professors', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('firstname');
-			$table->string('lastname');
+			$table->string('first_name');
+			$table->string('last_name');
 			//Always create column holding the foreign key
 			//Before creating the constraint!
 			$table->integer('user_id')->unsigned();
